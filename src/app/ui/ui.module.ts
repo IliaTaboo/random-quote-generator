@@ -9,6 +9,8 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { SigninPageComponent } from './signin-page/signin-page.component';
 import { StartPageComponent } from './start-page/start-page.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { NotificationPopupComponent } from './notification-popup/notification-popup.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 @NgModule({
   imports: [CommonModule, RouterModule, ReactiveFormsModule],
@@ -19,10 +21,13 @@ import { NavigationComponent } from './navigation/navigation.component';
     SigninPageComponent,
     StartPageComponent,
     NavigationComponent,
+    NotificationPopupComponent,
+    LoginFormComponent,
   ],
   exports: [
     UserProfileComponent,
     NavigationComponent,
+    NotificationPopupComponent,
   ]
 })
 export class UiModule { }

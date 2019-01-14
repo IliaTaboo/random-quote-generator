@@ -89,3 +89,18 @@ app-root:empty+.loading {
       margin-bottom: 50px;
   }
 }
+
+.text-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.box {
+  border-radius: 0px;
+  margin-top: 5px;
+}
+
+.notification{
+  margin-bottom: 5px;
+}

@@ -1,0 +1,30 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" routerLink="/">
+      <img src="assets/images/doublequote.png" width="30px" alt="Random qoute generator" /> Random qoute generator
+    </a>
+
+    <a id="navToggle" role="button" class="navbar-burger" (click)="toggleCollapse()" [ngClass]="{'is-active': show}">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div class="navbar-menu" [ngClass]="{'is-active': show}">
+    <div class="navbar-end">
+      <a class="navbar-item" routerLink="/home">
+        Home
+      </a>
+      <a class="navbar-item" routerLink="/login">
+        Login
+      </a>
+      <a class="navbar-item" routerLink="/signin">
+        Singin
+      </a>
+      <a class="navbar-item">
+        Logout
+      </a>
+    </div>
+  </div>
+</nav>

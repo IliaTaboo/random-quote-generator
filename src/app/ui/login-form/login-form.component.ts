@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 import { AuthService } from '../../core/auth.service';
 
@@ -14,7 +14,6 @@ type FormErrors = { [u in UserFields]: string };
 export class LoginFormComponent implements OnInit {
 
   loginForm: FormGroup;
-  newUser = true;
   passReset = false;
   formErrors: FormErrors = {
     'email': '',
@@ -37,14 +36,6 @@ export class LoginFormComponent implements OnInit {
 
   ngOnInit() {
     this.buildForm();
-  }
-
-  toggleForm() {
-    this.newUser = !this.newUser;
-  }
-
-  signup() {
-    this.auth.emailSignUp(this.loginForm.value['email'], this.loginForm.value['password']);
   }
 
   login() {

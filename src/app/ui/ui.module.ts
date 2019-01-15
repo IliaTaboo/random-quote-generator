@@ -11,6 +11,7 @@ import { StartPageComponent } from './start-page/start-page.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { NotificationPopupComponent } from './notification-popup/notification-popup.component';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { SigninFormComponent } from './signin-form/signin-form.component';
 
 @NgModule({
   imports: [CommonModule, RouterModule, ReactiveFormsModule],
@@ -23,6 +24,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
     NavigationComponent,
     NotificationPopupComponent,
     LoginFormComponent,
+    SigninFormComponent,
   ],
   exports: [
     UserProfileComponent,

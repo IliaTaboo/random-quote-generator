@@ -5,14 +5,15 @@
 
 <ng-template #guest class="box">
   <h3>Howdy, GUEST?</h3>
-  <p class="card-text">Login to get started...</p>
-  <button class="button" routerLink="/login">Login</button>
+  <p class="card-text">Login or Signin to get started...</p>
+  <div class="box-buttons">
+    <button class="button" routerLink="/login">Login</button>
+    <button class="button" routerLink="/signin">Signin</button>
+  </div>
 </ng-template>
 
 <ng-template #authenticated>
   <div *ngIf="auth.user | async as user">
     <h3>Howdy, {{ user.displayName }}?</h3>
-    <p class="text-truncate">UID: {{ user.uid }}</p>
-    <button class="button" (click)="logout()">Logout</button>
   </div>
 </ng-template>

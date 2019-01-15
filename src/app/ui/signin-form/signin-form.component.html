@@ -1,0 +1,41 @@
+<form [formGroup]="signinForm" (ngSubmit)="signin()">
+
+  <label>Email</label>
+  <input type="email" id="email" name="email2" class="input" formControlName="email" required>
+
+  <div *ngIf="email.hasError('email')" class="notification is-danger">
+    Enter a valid email address.
+  </div>
+
+  <div *ngIf="email.pending" class="notification is-info">
+    Hold tight... Checking availability of <strong>{{ email.value }}</strong>
+  </div>
+
+  <div>Password</div>
+  <input type="password" id="password" name="password2" class="input" formControlName="password" required>
+
+  <div *ngIf="password.hasError('minlength')" class="notification is-danger">
+    Must be at least 6 characters.
+  </div>
+
+  <div *ngIf="password.hasError('maxLength')" class="notification is-danger">
+    Password cannot be more than 100 characters long.
+  </div>
+
+  <div *ngIf="password.hasError('pattern')" class="notification is-danger">
+    Password must be include at one uppercase letter and one number.
+  </div>
+
+  <label for="confirmPassword">Repeat password</label>
+  <input type="password" id="confirm-password" name="confirmPassword2" class="input" formControlName="confirmPassword">
+
+  <div *ngIf="confirmPassword.errors && confirmPassword.errors.ConfirmPassword" class="notification is-danger">
+    Passsword and ConfirmPassword didn't match.
+  </div>
+
+  <div *ngIf="signinForm.valid" class="notification is-success">
+    Form is valid
+  </div>
+  <button type="submit" class="button" [disabled]="signinForm.valid">Submit</button>
+
+</form>

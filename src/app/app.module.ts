@@ -7,6 +7,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { CoreModule } from './core/core.module';
 import { UiModule } from './ui/ui.module';
@@ -30,6 +31,7 @@ import { AngularFireFunctionsModule } from '@angular/fire/functions';
     AngularFireAuthModule,
     AngularFireStorageModule,
     AngularFireFunctionsModule,
+    ReactiveFormsModule
   ],
   bootstrap: [AppComponent]
 })

@@ -54,7 +54,7 @@ export class AuthService {
       .catch(error => this.handleError(error));
   }
 
-  emailSignUp(email: string, password: string) {
+  emailSignin(email: string, password: string) {
     return this.afAuth.auth
       .createUserWithEmailAndPassword(email, password)
       .then(credential => {

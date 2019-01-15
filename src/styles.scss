@@ -99,6 +99,9 @@ app-root:empty+.loading {
 .box {
   border-radius: 0px;
   margin-top: 5px;
+  &-buttons {
+    display: flex;
+  }
 }
 
 .notification{

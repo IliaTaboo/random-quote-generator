@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { QuoteService } from '../../core/quote.service';
+import { Quote } from './quote.class';
 
 @Component({
   selector: 'app-home-page',
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
+  public quote = new Quote('', '');
 
-  constructor() { }
+  constructor(public quoteService: QuoteService) {
+    this.getQuote();
+  }
 
   ngOnInit() {
+  }
+
+  getQuote() {
+    this.quoteService.getRandomQuote().subscribe((data: Quote) => {
+      this.quote = new Quote(data.quoteText, data.quoteAuthor);
+    });
   }
 
 }

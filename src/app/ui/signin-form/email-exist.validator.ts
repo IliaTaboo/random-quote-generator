@@ -7,13 +7,13 @@ export class EmailExistValidator {
     return (control: AbstractControl) => {
 
       const email = control.value.toLowerCase();
-      
+
       return afs.collection('users', ref => ref.where('email', '==', email) )
         .valueChanges().pipe(
           debounceTime(500),
           take(1),
           map(arr => arr.length ? { emailAvailable: false } : null ),
-        )
-    }
+        );
+    };
   }
 }

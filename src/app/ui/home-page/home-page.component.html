@@ -1,3 +1,15 @@
-<p>
-  home-page works!
-</p>
+<div class="box has-text-centered">
+
+  <blockquote class="blockqute">
+    <p>
+      <img src="assets/images/doublequote.png" width="30px" alt="Random qoute generator" />
+      {{quote.quoteText}}
+    </p>
+    <footer class="blockquote-footer" [innerText]="quote.quoteAuthor"></footer>
+  </blockquote>
+  <a target="blank"
+  [href] = "'https://twitter.com/intent/tweet?text=' + quote.quoteText"
+  class="button" (click)="getQuote">Tweet</a>
+
+  <button class="button" (click)="getQuote">+</button>
+</div>

@@ -1,13 +1,11 @@
-import {
-  BrowserModule,
-  BrowserTransferStateModule
-} from '@angular/platform-browser';
+import { BrowserModule, BrowserTransferStateModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { CoreModule } from './core/core.module';
 import { UiModule } from './ui/ui.module';
@@ -31,7 +29,8 @@ import { AngularFireFunctionsModule } from '@angular/fire/functions';
     AngularFireAuthModule,
     AngularFireStorageModule,
     AngularFireFunctionsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   bootstrap: [AppComponent]
 })

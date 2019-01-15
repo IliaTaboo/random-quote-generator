@@ -28,13 +28,13 @@ export class SigninFormComponent implements OnInit {
         Validators.email,
         EmailExistValidator.email(this.afs)
       ]],
-      password:['', [
+      password: ['', [
         Validators.pattern('^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$'),
         Validators.minLength(6),
         Validators.maxLength(100)
       ]],
-      confirmPassword:['']
-     },{
+      confirmPassword: ['']
+     }, {
         validator: ConfirmPasswordValidator.MatchPassword
     });
   }
@@ -44,15 +44,15 @@ export class SigninFormComponent implements OnInit {
   }
 
   get email() {
-    return this.signinForm.get('email')
+    return this.signinForm.get('email');
   }
 
   get password() {
-    return this.signinForm.get('password')
+    return this.signinForm.get('password');
   }
 
   get confirmPassword() {
-    return this.signinForm.get('confirmPassword')
+    return this.signinForm.get('confirmPassword');
   }
 
 }

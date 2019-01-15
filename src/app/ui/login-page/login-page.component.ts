@@ -25,6 +25,6 @@ export class LoginPageComponent implements OnInit {
   }
 
   private afterSignIn() {
-    return this.router.navigate(['/']);
+    return this.router.navigate(['/home']);
   }
 }

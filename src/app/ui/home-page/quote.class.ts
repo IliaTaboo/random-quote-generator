@@ -1,9 +1,9 @@
 export class Quote {
-  public quoteText: string;
-  public quoteAuthor: string;
+  public quote: string;
+  public character: string;
 
-  constructor(quoteText: string, quoteAuthor: string) {
-    this.quoteText = quoteText;
-    this.quoteAuthor = quoteAuthor;
+  constructor(quote: string, character: string) {
+    this.quote = quote;
+    this.character = character;
   }
 }

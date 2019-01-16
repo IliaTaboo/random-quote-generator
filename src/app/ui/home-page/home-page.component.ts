@@ -19,7 +19,7 @@ export class HomePageComponent implements OnInit {
 
   getQuote() {
     this.quoteService.getRandomQuote().subscribe((data: Quote) => {
-      this.quote = new Quote(data.quoteText, data.quoteAuthor);
+      this.quote = new Quote(data[0].quote, data[0].character);
     });
   }
 

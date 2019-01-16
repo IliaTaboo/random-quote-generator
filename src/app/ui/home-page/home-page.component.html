@@ -3,13 +3,13 @@
   <blockquote class="blockqute">
     <p>
       <img src="assets/images/doublequote.png" width="30px" alt="Random qoute generator" />
-      {{quote.quoteText}}
+      {{quote.quote}}
     </p>
-    <footer class="blockquote-footer" [innerText]="quote.quoteAuthor"></footer>
+    <footer class="blockquote-footer" [innerText]="quote.character"></footer>
   </blockquote>
   <a target="blank"
-  [href] = "'https://twitter.com/intent/tweet?text=' + quote.quoteText"
-  class="button" (click)="getQuote">Tweet</a>
+  [href] = "'https://twitter.com/intent/tweet?text=' + quote.quote"
+  class="button">Tweet</a>
 
-  <button class="button" (click)="getQuote">+</button>
+  <button class="button" (click)="getQuote()">+</button>
 </div>
